@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Socket.IO chat</title>
+        <link rel="stylesheet" type="text/css" href="/public/style.css">
+    </head>
+    <body>
+        <div id="userContainer">
+            <form id="usernameForm" action="">
+                <label for="username">Set a username:</label>
+                <input id="username" autocomplete="off" required />
+                <button>Save</button>
+            </form>
+        </div>
+
+        <div id="chatContainer">
+            <div id="msgbox"></div>
+
+            <form id="msgform" action="">
+                <input id="msginput" autocomplete="off" />
+                <button>Send</button>
+            </form>
+
+            <label for="onlineUsers">Currently online</label>
+            <div id="onlineUsers"></div>
+        </div>
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="/public/script.js"></script>
+    </body>
+</html>
